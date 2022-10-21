@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="GroceryManagement.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+    <style type="text/css">
+        .auto-style4 {
+            width: 100%;
+            background-color: #00FF99;
+        }
+        .auto-style5 {
+            height: 97px;
+            text-align: center;
+        }
+        .auto-style6 {
+            height: 46px;
+            background-color: #9999FF;
+        }
+        .auto-style7 {
+            height: 339px;
+            background-color: #FFCCCC;
+        }
+        .auto-style8 {
+            height: 33px;
+            background-color: #FFCC66;
+        }
+        .auto-style9 {
+            text-align: center;
+        }
+    </style>
+</head>
+<form id="form1" runat="server">
+<table class="auto-style4" style="border: thick groove #FF0000">
+    <tr>
+        <td class="auto-style5">
+            <asp:Label ID="Label1" runat="server" BorderStyle="None" CssClass="auto-style4" Font-Bold="True" Font-Size="X-Large" Font-Underline="True" ForeColor="Black" Text="M-mart Grocery"></asp:Label>
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style6" style="border-style: groove; border-color: #9900FF">
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick">
+                <Items>
+                    <asp:MenuItem NavigateUrl="Registration.aspx" Text="Register" Value="Register"></asp:MenuItem>
+                    
+                    <asp:MenuItem NavigateUrl="Vegitable.aspx" Text="Vegitable" Value="Vegitable">
+                        <asp:MenuItem NavigateUrl="Fruits.aspx" Text="Fruits" Value="Fruits"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="Cart.aspx" Text="Cart" Value="Cart"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="AboutUs.aspx" Text="AboutUs" Value="AboutUs"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="Contact.aspx" Text="Bestdeals" Value="Bestdeals"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style7">
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style8">
+            <footer class="auto-style9"><b>@Created by Prerna 8444</b></footer>
+        </td>
+        
+    </tr>
+</table>
+</form>
+
